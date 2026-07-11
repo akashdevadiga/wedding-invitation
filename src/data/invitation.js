@@ -25,19 +25,19 @@ const invitation = {
   timeline: [
     {
       title: 'Guest Arrival',
-      date: 'Jun 30, 2026',
+      date: 'July 19, 2026',
       time: '10:00 AM',
       description: 'We welcome you..!'
     },
     {
       title: 'Wedding Ceremony',
-      date: 'Jun 30, 2026',
+      date: 'July 19, 2026',
       time: '11:00 AM',
       description: 'Your gracious presence is requested ❤'
     },
     // {
     //   title: 'Reception',
-    //   date: 'Jul 2, 2026',
+    //   date: 'July 19, 2026',
     //   time: '7:30 PM',
     //   description:
     //     'Your gracious presence is requested at the Reception.'
