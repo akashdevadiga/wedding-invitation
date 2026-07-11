@@ -26,7 +26,7 @@ const invitation = {
     {
       title: 'Nikah',
       date: 'July 19, 2026',
-      time: '1a:00 AM',
+      time: '11:00 AM',
       description: 'We welcome you..!'
     },
     {
