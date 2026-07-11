@@ -1,0 +1,19 @@
+.invitation-message {
+  background: radial-gradient(circle at top, rgba(249, 246, 246, 0.95), rgba(248, 232, 224, 0.95));
+  padding: 4.5rem 1.5rem;
+}
+
+.invitation-message__wrapper {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.invitation-message__text {
+  margin: 2rem auto 0;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-style: italic;
+  line-height: 1.95;
+  color: #5d424b;
+  white-space: pre-wrap;
+}

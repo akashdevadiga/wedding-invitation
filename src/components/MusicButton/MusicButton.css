@@ -1,0 +1,34 @@
+.music-button {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #6f4c55;
+  box-shadow: 0 10px 30px rgba(89, 46, 58, 0.14);
+  border: 1px solid rgba(155, 77, 90, 0.18);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.music-button:hover,
+.music-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.music-button__icon {
+  font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .music-button {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.7rem 0.85rem;
+  }
+}

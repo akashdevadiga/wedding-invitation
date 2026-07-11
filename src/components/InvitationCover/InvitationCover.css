@@ -1,0 +1,134 @@
+.invitation-cover {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #f8e8e0 0%, #f0c4b8 100%);
+  overflow: hidden;
+}
+
+.invitation-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 26%),
+    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.08), transparent 18%);
+  pointer-events: none;
+}
+
+.invitation-cover__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: min(100%, 420px);
+  padding: 0 1rem;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.invitation-cover--opening {
+  opacity: 0;
+}
+
+.invitation-cover__title {
+  margin: 0 0 28px;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  color: #7a434f;
+  letter-spacing: 0.02em;
+  text-shadow: 0 6px 14px rgba(119, 56, 72, 0.12);
+}
+
+.invitation-cover__seal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: radial-gradient(circle at 30% 20%, #f1a5af, #b55667 42%, #8b3f55 100%);
+  box-shadow: 0 20px 50px rgba(155, 77, 90, 0.18),
+    inset 0 16px 28px rgba(255, 255, 255, 0.16),
+    inset 0 -10px 18px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: float-seal 2.6s ease-in-out infinite;
+}
+
+.invitation-cover__seal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.25), transparent 42%);
+}
+
+.invitation-cover__seal::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.invitation-cover__seal-face {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 0.35rem;
+  z-index: 1;
+}
+
+.invitation-cover__seal-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+}
+
+.invitation-cover__seal-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.invitation-cover__seal:hover,
+.invitation-cover__seal:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 60px rgba(155, 77, 90, 0.24),
+    inset 0 16px 32px rgba(255, 255, 255, 0.2);
+}
+
+.invitation-cover__hint {
+  margin: 18px 0 0;
+  color: #97606d;
+  font-size: 0.96rem;
+  letter-spacing: 0.02em;
+}
+
+@keyframes float-seal {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (min-width: 768px) {
+  .invitation-cover__seal {
+    width: 144px;
+    height: 144px;
+  }
+
+  .invitation-cover__title {
+    font-size: clamp(3rem, 5vw, 5.5rem);
+  }
+}

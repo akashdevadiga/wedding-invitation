@@ -1,0 +1,137 @@
+.scratch-card {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: rgba(249, 246, 246, 0.95);
+}
+
+.scratch-card__header {
+  margin-bottom: 0.5rem;
+}
+
+.scratch-card__header h2 {
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #c97474;
+}
+
+.scratch-card__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem auto 2rem;
+}
+
+.scratch-card__divider-line {
+  display: block;
+  width: 4rem;
+  height: 1px;
+  background: rgba(201, 145, 130, 0.3);
+}
+
+.scratch-card__divider-heart {
+  display: inline-flex;
+  color: #c97474;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.scratch-card__frame {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 500px;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: #f9f6f6;
+  box-shadow: rgba(201, 145, 130, 0.25) 0px 8px 32px;
+}
+
+.scratch-card__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.scratch-card__text {
+  text-align: center;
+}
+
+.scratch-card__line {
+  margin: 0.6rem 0;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  color: #c97474;
+}
+
+.scratch-card__line:nth-child(1) {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.75rem;
+  color: #c97474;
+  opacity: 0.8;
+}
+
+.scratch-card__line:nth-child(2) {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3f3335;
+}
+
+.scratch-card__line:nth-child(3),
+.scratch-card__line:nth-child(4) {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.1rem;
+  color: #c97474;
+}
+
+.scratch-card__overlay {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  touch-action: none;
+  border-radius: 1.25rem;
+}
+
+.scratch-card__overlay--revealed {
+  pointer-events: none;
+}
+
+.scratch-card__note {
+  margin-top: 2rem;
+  color: #806f72;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .scratch-card {
+    padding: 3rem 1rem;
+  }
+
+  .scratch-card__header h2 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .scratch-card__frame {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .scratch-card__line:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .scratch-card__line:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .scratch-card__line:nth-child(3),
+  .scratch-card__line:nth-child(4) {
+    font-size: 0.95rem;
+  }
+}

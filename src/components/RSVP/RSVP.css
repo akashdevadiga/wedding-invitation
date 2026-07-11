@@ -1,0 +1,86 @@
+.rsvp {
+  padding: 4rem 1.5rem 5rem;
+  background: radial-gradient(circle at top, rgba(249, 246, 246, 0.98), rgba(248, 232, 224, 0.92));
+}
+
+.rsvp__wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.rsvp__wrapper h2 {
+  margin-bottom: 0.6rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  color: var(--rose-dark);
+  text-align: center;
+}
+
+.rsvp__intro {
+  margin: 0 0 2rem;
+  text-align: center;
+  color: #6f4c55;
+}
+
+.rsvp__form {
+  display: grid;
+  gap: 1rem;
+}
+
+.rsvp__form label,
+.rsvp__form fieldset {
+  display: grid;
+  gap: 0.65rem;
+  color: #5f3f49;
+  font-size: 0.95rem;
+}
+
+.rsvp__form input,
+.rsvp__form textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(155, 77, 90, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  color: #4e343f;
+}
+
+.rsvp__attendance {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.rsvp__attendance legend {
+  font-weight: 600;
+}
+
+.rsvp__attendance label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.rsvp__status {
+  margin: 0;
+  color: var(--rose-dark);
+  font-weight: 600;
+}
+
+.rsvp__button {
+  margin-top: 0.5rem;
+  padding: 1rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d4717a, #9b4d5a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.rsvp__button:hover,
+.rsvp__button:focus-visible {
+  transform: translateY(-1px);
+}

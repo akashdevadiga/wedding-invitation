@@ -1,0 +1,196 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem 3rem;
+  text-align: center;
+  color: #f8e8e0;
+  overflow: hidden;
+  background: #37162a;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 45%, transparent 55%, rgba(255, 255, 255, 0.08));
+  border-left: 1px solid rgba(248, 232, 224, 0.25);
+}
+
+.hero-section::before {
+  left: 0;
+}
+
+.hero-section::after {
+  right: 0;
+}
+
+.hero-section__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/backgrounds/herobg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-section__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(155, 77, 90, 0.35), rgba(212, 113, 122, 0.2));
+}
+
+.hero-section__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 850px;
+  padding: 0 1.5rem;
+}
+
+.hero-section__icon {
+  margin: 0 auto 1.25rem;
+  font-size: 1.5rem;
+  color: rgba(248, 232, 224, 0.95);
+}
+
+.hero-section__message {
+  margin: 0 auto 1.25rem;
+  max-width: 700px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px !important;
+  line-height: 1.25 !important;
+  color: rgba(248, 232, 224, 1);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) {
+  .hero-section__message {
+    font-size: 34px !important;
+  }
+}
+
+.hero-section__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 2rem;
+}
+
+.hero-section__line {
+  display: block;
+  width: 5rem;
+  height: 1px;
+  background: rgba(248, 232, 224, 0.45);
+}
+
+.hero-section__heart {
+  display: inline-flex;
+  color: rgba(248, 232, 224, 0.95);
+  font-size: 1rem;
+}
+
+.hero-section__names {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-section__names h1 {
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  color: #887435;
+  font-size: 50px;
+  line-height: 1.05;
+}
+
+@media (min-width: 768px) {
+  .hero-section__names h1 {
+    font-size: 80px;
+  }
+}
+
+.hero-section__amp {
+  font-family: 'Great Vibes', cursive;
+  margin: 0;
+  color: #887435;
+  font-size: 50px;
+}
+
+@media (min-width: 768px) {
+  .hero-section__amp {
+    font-size: 80px;
+  }
+}
+
+.hero-section__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(248, 232, 224, 0.78);
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.hero-section__arrow {
+  font-size: 1rem;
+  animation: float-arrow 1.9s ease-in-out infinite;
+}
+
+@keyframes float-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .hero-section::before,
+  .hero-section::after {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.25rem 0.75rem 2rem;
+  }
+
+  .hero-section__content {
+    padding: 0 0.75rem;
+  }
+
+  .hero-section__divider {
+    gap: 0.75rem;
+  }
+
+  .hero-section__line {
+    width: 3.5rem;
+  }
+
+  .hero-section__scroll {
+    bottom: 1rem;
+    font-size: 0.7rem;
+  }
+}
