@@ -24,9 +24,9 @@ const invitation = {
 
   timeline: [
     {
-      title: 'Guest Arrival',
+      title: 'Nikah',
       date: 'July 19, 2026',
-      time: '10:00 AM',
+      time: '1a:00 AM',
       description: 'We welcome you..!'
     },
     {
